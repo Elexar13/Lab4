@@ -1,0 +1,51 @@
+<div class="row valign-wrapper">
+  <div class="col m3 offset-m3 s6 center-align">
+    <h5>{{truck.number}}</h5>
+  </div>
+  <div class="col m3 s6 center-align">
+    <a class="btn-floating waves-effect waves-light blue"
+      (click)="showInfo=!showInfo">
+      <i *ngIf="showInfo" class="material-icons">
+        keyboard_arrow_up
+      </i>
+      <i *ngIf="!showInfo" class="material-icons">
+        keyboard_arrow_down
+      </i>
+    </a>
+  </div>
+</div>
+  <div class="info" *ngIf="showInfo">
+    <div class="input-field">
+      <input id="number" [(ngModel)]="truck.number"
+      type="text" class="validate">
+      <label for="number" class="active">Номер вантажівки</label>
+    </div>
+    <div class="input-field">
+      <input id="mark" [(ngModel)]="truck.mark"
+             type="text" class="validate">
+      <label for="mark" class="active">Марка</label>
+    </div>
+    <div class="input-field">
+      <input id="typeOfCargo" [(ngModel)]="truck.typeOfCargo"
+             type="text" class="validate">
+      <label for="typeOfCargo" class="active">Тип вантажу</label>
+    </div>
+    <div class="input-field">
+      <input id="quantity" [(ngModel)]="truck.driversQuantity"
+             type="text" class="validate">
+      <label for="quantity" class="active">Кількість водіїв</label>
+    </div>
+    <a class="rem-row btn-floating waves-effect waves-light red"
+       (click)="delTruck()">
+      <i class="material-icons">delete</i>
+    </a>
+    <a [routerLink]="'/drivers/'+truck.number"
+      class="btn-floating waves-effect waves-light blue-grey">
+        <i class="material-icons">
+          view_headline
+        </i>
+    </a>
+  </div>
+
+
+

@@ -1,0 +1,6 @@
+<h5 class="center-align">Список вантажівок</h5>
+<app-new-truck></app-new-truck>
+<app-truck
+  *ngFor="let truck of trucks; let i = index"
+  [truck]="truck" [truckIndex]="i">>
+</app-truck>

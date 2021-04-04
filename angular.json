@@ -31,9 +31,12 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/materialize.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/materialize.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -127,5 +130,8 @@
       }
     }
   },
-  "defaultProject": "angular-test"
+  "defaultProject": "angular-test",
+  "cli": {
+    "analytics": "f54d7556-50dd-44cb-8a22-bed8d3d9d2d5"
+  }
 }

@@ -1,0 +1,21 @@
+<div class="row valign-wrapper">
+  <div class="col m6 offset-m3 s12">
+    <a [routerLink]="'/trucks'"
+      class="btn-floating waves-effect waves-light blue-grey">
+        <i class="material-icons">
+          keyboard_arrow_left
+        </i>
+    </a>
+  </div>
+</div>
+
+<div class="row valign-wrapper">
+  <div class="col m6 offset-m3 s12">
+    <h5 class="center-align">Список водіїв</h5>
+  </div>
+</div>
+<div *ngFor="let driver of drivers" class="row valign-wrapper">
+  <div class="col m6 offset-m3 s12">
+    <h6>{{driver.name}}</h6>
+  </div>
+</div>
